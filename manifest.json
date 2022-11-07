@@ -1,0 +1,35 @@
+{
+    "theme_color": "#FFC300",
+    "background_color": "#FFC300",
+    "display": "fullscreen",
+    "scope": "/PWA/pwa-duo/",
+    "start_url": "index.html",
+    "name": "Duo",
+    "short_name": "DUO",
+    "icons": [
+      {
+        "src": "icons-1/manifest-icon-192.maskable.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "icons-1/manifest-icon-192.maskable.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "icons-1/manifest-icon-512.maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "icons-1/manifest-icon-512.maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+    ]
+}

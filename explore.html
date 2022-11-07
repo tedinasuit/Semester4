@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>PWA-DUO</title>
+    <meta name="author" content="Omar Kacimi">
+    <meta name="description" content="duo pwa">
+    <meta name="keywords" content="pwa,duo">
+    <link rel='stylesheet' type='text/css' media='screen' href='style/style.css'>
+    <link rel='stylesheet' type='text/css' href='style/nav.css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+  <p>Explore</p>
+
+  <nav class="nav">
+    <a href="explore.html" class="nav__link nav__link--active">
+      <i class="material-icons nav__icon">dashboard</i>
+      <span class="nav__text">Explore</span>
+    </a>
+    <a href="photos.html" class="nav__link">
+      <i class="material-icons nav__icon">image</i>
+      <span class="nav__text">Photos</span>
+    </a>
+    <a href="favourites.html" class="nav__link">
+      <i class="material-icons nav__icon">star</i>
+      <span class="nav__text">Favourites
+      </span>
+    </a>
+    <a href="account.html" class="nav__link">
+      <i class="material-icons nav__icon">person</i>
+      <span class="nav__text">Account</span>
+    </a>
+  </nav>
+
+  <script>
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js');
+      }
+  </script>
+
+  <script src="script.js"> </script>
+</body>
+</html>
