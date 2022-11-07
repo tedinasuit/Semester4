@@ -15,7 +15,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-  <p>Explore</p>
+  <p id="title">Explore</p>
+
+  <input type="text" id="myInput" onkeyup="myFunction(), myFunction2()" placeholder="Search for names..">
+
+  <p id="scroll-title">Upcoming trips</p>
+  
+  <ul id="myUL" class="hs full">
+    <li><a href="#">Brazil</a></li>
+    <li><a href="#">Greece</a></li>
+    <li><a href="#">Mexico</a></li>
+    <li><a href="#">Norway</a></li>
+  </ul>
+
+  <p id="scroll-title">Photography lessons</p>
+  
+  <ul id="myUL2" class="hs full">
+    <li><a href="#">Astrophotography</a></li>
+    <li><a href="#">Wildlife</a></li>
+    <li><a href="#">Street Photography</a></li>
+    <li><a href="#">Architecture</a></li>
+  </ul>
+</div>
 
   <nav class="nav">
     <a href="explore.html" class="nav__link nav__link--active">
@@ -44,5 +65,46 @@
   </script>
 
   <script src="script.js"> </script>
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+
+    function myFunction2() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL2");
+      li = ul.getElementsByTagName('li');
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
 </body>
 </html>
