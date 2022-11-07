@@ -2,7 +2,7 @@
     "theme_color": "#FFC300",
     "background_color": "#FFC300",
     "display": "fullscreen",
-    "scope": "/PWA/",
+    "scope": "/PWA/pwa-duo/",
     "start_url": "explore.html",
     "name": "Duo",
     "short_name": "DUO",
