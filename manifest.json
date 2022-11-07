@@ -3,7 +3,7 @@
     "background_color": "#FFC300",
     "display": "fullscreen",
     "scope": "/PWA/pwa-duo/",
-    "start_url": "explore.html",
+    "start_url": "/PWA/pwa-duo/",
     "name": "Duo",
     "short_name": "DUO",
     "icons": [

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Brazil</title>
+    <meta name="author" content="Omar Kacimi">
+    <meta name="description" content="duo pwa">
+    <meta name="keywords" content="pwa,duo">
+    <link rel='stylesheet' type='text/css' media='screen' href='style/style.css'>
+    <link rel='stylesheet' type='text/css' href='style/nav.css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+    <div class="header">
+    <p id="title">Brazil</p>
+    <img class="head-img" src="img/Brazil.jpg" alt="Brazil">
+    </div>
+
+    <div class="info">
+    <p id="title" style="font-size: 25px;">Info</p>
+
+    <p class="textbox">
+        Brazil is famous for its stunning beaches, rainforests, and diverse cities. 
+        It is known as the country of football with world-renowned footballers such as Pelé and Neymar born there.
+    </p>
+
+    </div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__link">
+      <i class="material-icons nav__icon">dashboard</i>
+      <span class="nav__text">Explore</span>
+    </a>
+    <a href="photos.html" class="nav__link">
+      <i class="material-icons nav__icon">image</i>
+      <span class="nav__text">Photos</span>
+    </a>
+    <a href="favourites.html" class="nav__link">
+      <i class="material-icons nav__icon">star</i>
+      <span class="nav__text">Favourites
+      </span>
+    </a>
+    <a href="account.html" class="nav__link">
+      <i class="material-icons nav__icon">person</i>
+      <span class="nav__text">Account</span>
+    </a>
+  </nav>
+
+  <script>
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js');
+      }
+  </script>
+
+  <script src="script.js"> </script>
+</body>
+</html>

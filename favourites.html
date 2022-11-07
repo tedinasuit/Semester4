@@ -8,6 +8,7 @@
     <meta name="description" content="duo pwa">
     <meta name="keywords" content="pwa,duo">
     <link rel='stylesheet' type='text/css' media='screen' href='style/style.css'>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel='stylesheet' type='text/css' href='style/nav.css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -15,10 +16,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-  <p>Favourites</p>
+  <p id="title">Favourites</p>
+  <ul class="myclass"></ul>
+
+  <br>
+  <button class="deleteBtn" onclick="delB()">Delete all</button>
 
   <nav class="nav">
-    <a href="explore.html" class="nav__link">
+    <a href="index.html" class="nav__link">
       <i class="material-icons nav__icon">dashboard</i>
       <span class="nav__text">Explore</span>
     </a>
@@ -42,6 +47,48 @@
           navigator.serviceWorker.register('/service-worker.js');
       }
   </script>
+
+  <script>
+    const ul = document.querySelector(".myclass");
+const input = document.getElementById('item');
+const greece = document.getElementById('Greece');
+const brazil = document.getElementById('Brazil');
+let itemsArray = localStorage.getItem('items') ?
+JSON.parse(localStorage.getItem('items')) : [];
+
+itemsArray.forEach(divMakerB);
+function divMakerB (text){
+    const div = document.createElement('div');
+    div.innerHTML = text;
+    ul.appendChild(div);
+    div.id = "Brazil";
+}
+
+function addB(){
+    itemsArray.push(brazil.innerHTML);
+    localStorage.setItem('items', JSON.stringify(itemsArray));
+    divMakerB(brazil.innerHTML);
+}
+
+function addG(){
+    itemsArray.push(greece.innerHTML);
+    localStorage.setItem('items', JSON.stringify(itemsArray));
+    divMakerG(greece.innerHTML);
+}
+
+function delB(){
+    localStorage.clear();
+    ul.innerHTML = '';
+    itemsArray = [];
+}
+
+  </script>
+
+  <style>
+    .item-trips {
+    margin: min(10px);
+}
+  </style>
 
   <script src="script.js"> </script>
 </body>
