@@ -1,0 +1,251 @@
+:root {
+    --gutter: 20px;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+  .app {
+    padding: var(--gutter) 0;
+    display: grid;
+    grid-gap: var(--gutter) 0;
+    grid-template-columns: var(--gutter) 1fr var(--gutter);
+    align-content: start;
+  }
+  
+  .app > * {
+    grid-column: 2 / -2;
+  }
+  
+  .app > .full {
+    grid-column: 1 / -1;
+  }
+  
+  .hs {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 10px;
+    grid-template-rows: minmax(150px, 1fr);
+    grid-auto-flow: column;
+  
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    padding-bottom: calc(.75 * var(--gutter));
+    margin-bottom: calc(-.25 * var(--gutter));
+  }
+  
+  .hs:before,
+  .hs:after {
+    content: '';
+    width: 10px;
+  }
+
+  #title {
+    font-size: 35px;
+    margin-left: 30px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+}
+
+.textbox {
+  max-width: 600px;
+  margin: 30px;
+}
+
+#scroll-title {
+    font-size: 30px;
+    margin-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+    margin-top: 0 ;
+}
+
+.item {
+    background-color: lightyellow;
+    border-radius: 15px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 15vh;
+    height: 15vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.explore {
+  width: 15vh;
+  height: 15vh;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 15vh;
+}
+
+.item-trips {
+    background-color: lightyellow;
+    border-radius: 100px;
+    width: 15vh;
+    height: 15vh;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    overflow-y: hidden;
+    scrollbar-width: none 
+}
+
+ul::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+#myInput {
+    background-image: url('/style/Vector_search_icon.svg');
+    background-size: 13px;
+    background-position: 16px 15px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 65%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  
+  .fotoFeed {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 100px;
+  }
+
+  .feeditem {
+    margin: 5px;
+  }
+
+  .feedImage{
+    width: 300px;
+    height: 200px;
+  }
+
+  
+  #choose-file {
+    background-color: lightyellow;
+    color: black;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  #take-picture{
+    background-color: lightyellow;
+    color: black;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .btnAddPost {
+    float: right;
+    margin-right: 50px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info {
+    margin-top: 150px;
+  }
+  
+
+
+  .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0%;
+    background-color: white;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  #video {
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px black;
+  width: 320px;
+  height: 240px;
+}
+
+#photo {
+  border: 1px solid black;
+  box-shadow: 2px 2px 3px black;
+  width: 320px;
+  height: 240px;
+}
+
+#canvas {
+  display: none;
+}
+
+.camera {
+  width: 340px;
+  display: inline-block;
+}
+
+.output {
+  width: 340px;
+  display: inline-block;
+}
+
+#startbutton {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 32px;
+  background-color: rgba(0, 150, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  color: rgba(255, 255, 255, 1);
+}
+
+.contentarea {
+  font-size: 16px;
+  font-family: "Lucida Grande", "Arial", sans-serif;
+  width: 760px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.cameraContainer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.head-img {
+  border-radius: 100px;
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+}
+
+  
+  
